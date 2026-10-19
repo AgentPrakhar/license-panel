@@ -785,7 +785,8 @@ app.get("/api/meta", authRequired, (req, res) => {
 });
 
 /* ---------------- static frontend ---------------- */
-app.use(express.static(path.join(__dirname, "public")));
+const PUBDIR = fs.existsSync(path.join(__dirname, "public")) ? "public" : "Public";
+app.use(express.static(path.join(__dirname, PUBDIR)));
 
 app.listen(PORT, () => {
   console.log("License Key Panel running on http://localhost:" + PORT);
