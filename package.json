@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "description": "Standalone self-hostable license key management panel",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "server.js",
+  "name": "license-key-panel",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0"
+}
